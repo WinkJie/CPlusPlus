@@ -199,12 +199,19 @@ void AtomicOperater()
 
 int main(int argc, char* argv[])
 {
-#if 0
+#if 1
 	HuaweiDaily a;
-	a.RandomNumber();
+	/*a.RandomNumber();
 	a.countword();
 	a.PrintLastWord();
-	a.StringSplite();
+	a.StringSplite();*/
+	unsigned int decimal = 123;
+	cin >> decimal;
+	a.findNumOfBinary(decimal);
+	
+	std::string binary = a.BaseConversion(decimal);
+	std::cout << "The binary representation of " << decimal << " is " << binary << std::endl;
+
 #endif // 1
 
 #if 0

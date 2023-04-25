@@ -31,6 +31,13 @@ public:
 	void RandomNumber();
 	//字符串分割
 	void StringSplite();
-	//
+	//十进制与二进制的转换
+	string BaseConversion(unsigned int num);
+	void findNumOfBinary(unsigned int nums);
+	//n进制转换
+	string Baseconversion(unsigned int num, int decimal); //失败
+public:
+	
+
 };
 

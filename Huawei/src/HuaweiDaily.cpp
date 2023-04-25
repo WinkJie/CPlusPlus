@@ -133,3 +133,35 @@ void HuaweiDaily::StringSplite()
 		break;
 	}
 }
+
+string HuaweiDaily::BaseConversion(unsigned int num)
+{
+	string str;
+	if (num == 0)
+		return str="0";
+	else
+		return BaseConversion(num / 2) + std::to_string(num % 2);
+}
+
+void HuaweiDaily::findNumOfBinary(unsigned int nums)
+{
+	int num = 0;
+	string str = BaseConversion(nums);
+	if (str.length() < 0)
+		return;
+	for (int i = 0; i < str.length(); i++)
+	{
+		if (str[i] == '1')
+			num++;
+	}
+	cout << num << endl;	
+}
+
+string HuaweiDaily::Baseconversion(unsigned int num, int decimal)
+{
+	string str;
+	if (num == 0)
+		return str = "0";
+	else
+		return Baseconversion(num / decimal,decimal) + to_string(num % decimal);
+}
