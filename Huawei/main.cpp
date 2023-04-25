@@ -11,33 +11,33 @@
 #include <chrono>
 #include <future>
 
-#include "BaseHide.h"
-#include "CopyConstructor.h"
-#include "TestDaily.h"
-#include "Log.h"
-#include "DesignMode.h"
-#include "BinToHex.h"
-#include "CanGuanProcess.h"
-#include "DailyBase.h"
-#include "Linear_List.h"
-#include "Smart_ptr.h"
-#include "ThreadAndProcess.h"
-#include "ClassInternetB.h"
-#include "Calculator.h"
-#include "ThreadAndProcess.h"
-#include "Observer.h"
-#include "Listenner.h"
-#include "BasicAlgorithm.h"
-#include "IPSubnetMask.h"
-#include "ListNode.h"
-#include "SuZhouTongYuan.h"
+#include "src/BaseHide.h"
+#include "src/CopyConstructor.h"
+#include "src/TestDaily.h"
+#include "src/Log.h"
+#include "src/DesignMode.h"
+#include "src/BinToHex.h"
+#include "src/CanGuanProcess.h"
+#include "src/DailyBase.h"
+#include "src/Linear_List.h"
+#include "src/Smart_ptr.h"
+#include "src/ThreadAndProcess.h"
+#include "src/ClassInternetB.h"
+#include "src/Calculator.h"
+#include "src/ThreadAndProcess.h"
+#include "src/Observer.h"
+#include "src/Listenner.h"
+#include "src/BasicAlgorithm.h"
+#include "src/IPSubnetMask.h"
+#include "src/ListNode.h"
+#include "src/SuZhouTongYuan.h"
 
 //#include "../ThreadAndProcess/include/opencv/cv.h"
 //#include "../ThreadAndProcess/include/opencv/cv.hpp"
 //#include "../ThreadAndProcess/include/opencv2/objdetect.hpp"
-#include "include/opencv/cv.h"
-#include "include/opencv/cv.hpp"
-#include "include/opencv2/objdetect.hpp"
+#include "src/include/opencv/cv.h"
+#include "src/include/opencv/cv.hpp"
+#include "src/include/opencv2/objdetect.hpp"
 
 using namespace std;
 //struct ListNode
@@ -101,7 +101,7 @@ using namespace std;
 //	iop->next = nullptr;
 //	return iop;
 //}
-void AbstractFactoryOutput() 
+void AbstractFactoryOutput()
 {
 	//抽象工厂模式
 	AbstractFactory* factory = NULL;
@@ -123,13 +123,13 @@ void AbstractFactoryOutput()
 	delete Banana;
 	delete factory;
 }
-bool Input(vector<string> &arr)
+bool Input(vector<string>& arr)
 {
 	string input;
 	//vector<string>arr;
 	bool flag = true;
 	cin >> input;
-	if("x" != input)
+	if ("x" != input)
 	{
 		arr.push_back(input);
 		cout << "arr.size() is " << arr.size() << endl;
@@ -138,14 +138,14 @@ bool Input(vector<string> &arr)
 	else
 	{
 		flag = false;
-	}	
+	}
 	return flag;
 }
 bool Inputs(vector<string>& arr)
 {
 	string input;
 	//vector<string>arr;
-	bool flag = true;	
+	bool flag = true;
 	if (cin >> input)
 	{
 		arr.push_back(input);
@@ -189,23 +189,23 @@ int ObserverTest12(void)
 //1.have atomic
 atomic<int> g_count;
 
-	//2.no atomic
+//2.no atomic
 //int g_count = 0;
 
-void work(int x) 
+void work(int x)
 {
 	for (int i = 0; i < 1000; i++)
 	{
 		g_count++;
-		cout <<x<<" is " << g_count << "   ";
+		cout << x << " is " << g_count << "   ";
 	}
 	cout << endl;
 }
 
 void AtomicOperater()
 {
-	std::thread t1(work,1);
-	std::thread t2(work,2);
+	std::thread t1(work, 1);
+	std::thread t2(work, 2);
 	t1.join();
 	t2.join();
 
@@ -218,14 +218,14 @@ void AtomicOperater()
 
 
 int main(int argc, char* argv[])
-{	
+{
 #if 1
-	SuZhouTongYuan *a = new SuZhouTongYuan;
+	SuZhouTongYuan* a = new SuZhouTongYuan;
 	SuZhouTongYuan b;
-	
+
 #endif
 #if 0
-	ListNode* a=nullptr;
+	ListNode* a = nullptr;
 	a->insertNode(0, 0);
 	a->insertNode(1, 1);
 	a->insertNode(2, 2);
@@ -240,7 +240,7 @@ int main(int argc, char* argv[])
 	}
 #endif
 #if 0
-	IPSubnetMask *a = NULL;
+	IPSubnetMask* a = NULL;
 	a->Do1();
 #endif // 1
 
@@ -251,11 +251,11 @@ int main(int argc, char* argv[])
 	int num = 0;
 	for (int i = 0; i < n; i++)
 	{
-		if (a[i] != ' ') 
+		if (a[i] != ' ')
 		{
 			num++;
 		}
-		else 
+		else
 		{
 			num = 0;
 		}
@@ -264,7 +264,7 @@ int main(int argc, char* argv[])
 #endif
 #if 0
 	string a, b;
-	while (cin>>a)
+	while (cin >> a)
 	{
 		b.swap(a);
 	}
@@ -278,7 +278,7 @@ int main(int argc, char* argv[])
 #if 0
 	BasicAlgorithm a;
 	a.automic_test();
-	
+
 	//ObserverTest12();
 #endif // 1
 
@@ -298,14 +298,14 @@ int main(int argc, char* argv[])
 #endif // 1
 
 #if 0
-	UdpDoubleCommit *Udp = new UdpDoubleCommit();
+	UdpDoubleCommit* Udp = new UdpDoubleCommit();
 
 #endif // 1
 
 #if 0
 	/*C++各个版本的特性测试*/
 	vector<int> a{ 1,5,2,3,6,5,4,8 };
-	for (auto i: a)
+	for (auto i : a)
 	{
 		/*cout\cerr\clog之间的区别与联系
 		* cout是会开辟一个缓冲区，在遇到程序结束或者换行符号或者endl后会刷新缓冲区，而且可以重定向
@@ -317,7 +317,7 @@ int main(int argc, char* argv[])
 		cout << "cout is " << i << endl;
 		cerr << "cerr is " << i << endl;
 		clog << "clog is " << i << endl;
-		clog<<std::flush;
+		clog << std::flush;
 	}
 #endif // 1
 
@@ -327,7 +327,7 @@ int main(int argc, char* argv[])
 	{
 		cout << argv[i] << endl;
 	}
-	BinToHex a(argc,argv);// = new BinToHex(argc, argv);
+	BinToHex a(argc, argv);// = new BinToHex(argc, argv);
 	//a.Do(argc, argv);
 #endif // 1
 
@@ -348,9 +348,9 @@ int main(int argc, char* argv[])
 		cout << tmp[tmp.size() - 1] << endl;
 		cout << tmp[tmp.size() - 1].length() << endl;
 		cout << "----------------" << endl;
-			
+
 	}
-	
+
 #endif // 0
 
 #if 0
@@ -373,8 +373,8 @@ int main(int argc, char* argv[])
 #endif // 0
 #if 0
 	//int[] arri = { 1,5,2,63,59,2,5 }; //Java写法
-	int arr[]   = {1, 5, 6, 0, 7, 4, 9, 3};
-	int index[] = {0, 1, 2, 3, 4, 0, 5, 0, 5, 6, 7};
+	int arr[] = { 1, 5, 6, 0, 7, 4, 9, 3 };
+	int index[] = { 0, 1, 2, 3, 4, 0, 5, 0, 5, 6, 7 };
 	int aop[56] = { 4,5,6,8,9 };
 	string tel = "";
 	for (int i : aop)
@@ -425,7 +425,7 @@ int main(int argc, char* argv[])
 	int* const q = &IntNum; //指针常量
 	cout << "指针常量初始化：" << *q << "  ++" << q << endl;
 	*q = IntNum1;
-	
+
 	cout << "指针常量改变后：" << *q << "  ++" << q << endl;
 	int const* const L = &IntNum;
 	cout << "常指针常量初始化：" << *L << "  ++" << L << endl;
@@ -469,39 +469,39 @@ int main(int argc, char* argv[])
 	 *foo BaseHide:
 	 */
 
-	/*多态的类调用如果没有关键字virtual
-	 *那么C++就不能成为多态，但是在Java中是可以通过重写基类来实现多态的
-	 *
-	 */
-	/*
-	Java中实现类多态的方式
-	public class Main {
-		public static class Base
-		{
-			public void test() {
-				System.out.println("test base");
-			}
-		}
-		public static class Derive extends Base {
-			public void test() {
-				System.out.println("test Derive");
-			}
-		}
-		public static void main(String[] args) {
-			Derive d = new Derive();
-			Base b = d;
-			d.test();
-			b.test();//和C++效果一样
-		}
-	}
-	*/
-	//char str[15];// = { 1,2,3,4,5,6,7,8 }
+	 /*多态的类调用如果没有关键字virtual
+	  *那么C++就不能成为多态，但是在Java中是可以通过重写基类来实现多态的
+	  *
+	  */
+	  /*
+	  Java中实现类多态的方式
+	  public class Main {
+		  public static class Base
+		  {
+			  public void test() {
+				  System.out.println("test base");
+			  }
+		  }
+		  public static class Derive extends Base {
+			  public void test() {
+				  System.out.println("test Derive");
+			  }
+		  }
+		  public static void main(String[] args) {
+			  Derive d = new Derive();
+			  Base b = d;
+			  d.test();
+			  b.test();//和C++效果一样
+		  }
+	  }
+	  */
+	  //char str[15];// = { 1,2,3,4,5,6,7,8 }
 	char str[30] = "good morning \0 everybody";
 	printf(" str = %s  strlen(str) = %d \n", str, strlen(str));
-	cout << strlen(str) << "-----" << sizeof(str) << endl;	
+	cout << strlen(str) << "-----" << sizeof(str) << endl;
 
 	cout << "------------------------------------------" << endl;
-	BaseHide *a;
+	BaseHide* a;
 	SonBaseHide b;
 	b.Test();
 	cout << endl << "------------------------------------------" << endl;
@@ -608,7 +608,7 @@ int main(int argc, char* argv[])
 	cout << abc->m_Num1 << " / " << abc->m_Num2 << " = " << abc->getResult() << endl;
 	cout << abc->sizeokasd() << endl;
 	delete abc;
-	
+
 
 #endif // 1  多肽的实现
 
@@ -620,7 +620,7 @@ int main(int argc, char* argv[])
 	vector<ClassInternetB> op;
 	op.push_back(Ba);
 	op.push_back(Bb);
-	
+
 	cout << op.size() << endl;
 
 	ClassInternetB iop = op[0];

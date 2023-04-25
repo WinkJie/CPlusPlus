@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7c254a31-3435-4ae9-8ab4-3655d442f8f7}</ProjectGuid>
-    <RootNamespace>ThreadAndProcess</RootNamespace>
+    <ProjectGuid>{7f11c490-a3c2-4464-b1c9-5b6d0ba60776}</ProjectGuid>
+    <RootNamespace>Huawei</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -31,7 +31,6 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -39,14 +38,12 @@
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -54,7 +51,6 @@
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
-    <UseOfMfc>Static</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -76,43 +72,30 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IntDir>$(ProjectDir)x64\</IntDir>
-    <OutDir>$(ProjectDir)bin\</OutDir>
-    <TargetName>WinkJieDaily</TargetName>
-    <IncludePath>$(ProjectDir)include\opencv2;$(ProjectDir)include\opencv;$(ProjectDir)include;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\boost\filesystem;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\boost;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)libs;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\libs\filesystem;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Visual Studio\WorkSpace\Huawei\src\include\xtk;D:\Visual Studio\WorkSpace\Huawei\src\include\opencv2;D:\Visual Studio\WorkSpace\Huawei\src\include\opencv;D:\Visual Studio\WorkSpace\Huawei\src\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Visual Studio\WorkSpace\Huawei\src\libs\libWebSocket;D:\Visual Studio\WorkSpace\Huawei\src\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IntDir>$(ProjectDir)x64\</IntDir>
-    <OutDir>$(ProjectDir)bin\</OutDir>
-    <TargetName>WinkJieDaily</TargetName>
-    <IncludePath>$(ProjectDir)include\opencv2;$(ProjectDir)include\opencv;$(ProjectDir)include;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\boost\filesystem;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\boost;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)libs;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\libs\filesystem;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Visual Studio\WorkSpace\Huawei\src\include\xtk;D:\Visual Studio\WorkSpace\Huawei\src\include\opencv2;D:\Visual Studio\WorkSpace\Huawei\src\include\opencv;D:\Visual Studio\WorkSpace\Huawei\src\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Visual Studio\WorkSpace\Huawei\src\libs\libWebSocket;D:\Visual Studio\WorkSpace\Huawei\src\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(ProjectDir)bin\</OutDir>
-    <IntDir>$(ProjectDir)x64\</IntDir>
-    <TargetName>WinkJieDaily</TargetName>
-    <IncludePath>$(ProjectDir)include\opencv2;$(ProjectDir)include\opencv;$(ProjectDir)include;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\boost\filesystem;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\boost;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)libs;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\libs\filesystem;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Visual Studio\WorkSpace\Huawei\src\include\xtk;D:\Visual Studio\WorkSpace\Huawei\src\include\opencv2;D:\Visual Studio\WorkSpace\Huawei\src\include\opencv;D:\Visual Studio\WorkSpace\Huawei\src\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Visual Studio\WorkSpace\Huawei\src\libs\libWebSocket;D:\Visual Studio\WorkSpace\Huawei\src\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)bin\</OutDir>
-    <IntDir>$(ProjectDir)x64\</IntDir>
-    <TargetName>WinkJieDaily</TargetName>
-    <IncludePath>$(ProjectDir)include\opencv2;$(ProjectDir)include\opencv;$(ProjectDir)include;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\boost\filesystem;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\boost;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)libs;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\libs\filesystem;E:\英雄时刻\19studyAnd考研\BookPro_C++\boost_1_74_0\boost_1_74_0\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Visual Studio\WorkSpace\Huawei\src\include\xtk;D:\Visual Studio\WorkSpace\Huawei\src\include\opencv2;D:\Visual Studio\WorkSpace\Huawei\src\include\opencv;D:\Visual Studio\WorkSpace\Huawei\src\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Visual Studio\WorkSpace\Huawei\src\libs\libWebSocket;D:\Visual Studio\WorkSpace\Huawei\src\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_AFXDLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,9 +108,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_AFXDLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,9 +122,8 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_AFXDLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,9 +136,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_AFXDLL</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -167,56 +147,53 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BaseHide.cpp" />
-    <ClCompile Include="BasicAlgorithm.cpp" />
-    <ClCompile Include="BinToHex.cpp" />
-    <ClCompile Include="Calculator.cpp" />
-    <ClCompile Include="CanGuanProcess.cpp" />
-    <ClCompile Include="ClassInternetA.cpp" />
-    <ClCompile Include="ClassInternetB.cpp" />
-    <ClCompile Include="CopyConstructor.cpp" />
-    <ClCompile Include="DailyBase.cpp" />
-    <ClCompile Include="DesignMode.cpp" />
-    <ClCompile Include="IPSubnetMask.cpp" />
-    <ClCompile Include="Linear_List.cpp" />
-    <ClCompile Include="Listenner.cpp" />
-    <ClCompile Include="ListNode.cpp" />
-    <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Observer.cpp" />
-    <ClCompile Include="SharePointer.cpp" />
-    <ClCompile Include="Smart_ptr.cpp" />
-    <ClCompile Include="SuZhouTongYuan.cpp" />
-    <ClCompile Include="ThreadAndProcess.cpp" />
-    <ClCompile Include="UdpDoubleCommit.cpp" />
+    <ClCompile Include="src\BaseHide.cpp" />
+    <ClCompile Include="src\BasicAlgorithm.cpp" />
+    <ClCompile Include="src\BinToHex.cpp" />
+    <ClCompile Include="src\Calculator.cpp" />
+    <ClCompile Include="src\CanGuanProcess.cpp" />
+    <ClCompile Include="src\ClassInternetA.cpp" />
+    <ClCompile Include="src\ClassInternetB.cpp" />
+    <ClCompile Include="src\CopyConstructor.cpp" />
+    <ClCompile Include="src\DailyBase.cpp" />
+    <ClCompile Include="src\DesignMode.cpp" />
+    <ClCompile Include="src\IPSubnetMask.cpp" />
+    <ClCompile Include="src\Linear_List.cpp" />
+    <ClCompile Include="src\Listenner.cpp" />
+    <ClCompile Include="src\ListNode.cpp" />
+    <ClCompile Include="src\Log.cpp" />
+    <ClCompile Include="src\Observer.cpp" />
+    <ClCompile Include="src\SharePointer.cpp" />
+    <ClCompile Include="src\Smart_ptr.cpp" />
+    <ClCompile Include="src\SuZhouTongYuan.cpp" />
+    <ClCompile Include="src\ThreadAndProcess.cpp" />
+    <ClCompile Include="src\UdpDoubleCommit.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BaseHide.h" />
-    <ClInclude Include="BasicAlgorithm.h" />
-    <ClInclude Include="BinToHex.h" />
-    <ClInclude Include="Calculator.h" />
-    <ClInclude Include="CanGuanProcess.h" />
-    <ClInclude Include="ClassInternetA.h" />
-    <ClInclude Include="ClassInternetB.h" />
-    <ClInclude Include="CopyConstructor.h" />
-    <ClInclude Include="DailyBase.h" />
-    <ClInclude Include="DesignMode.h" />
-    <ClInclude Include="IPSubnetMask.h" />
-    <ClInclude Include="Linear_List.h" />
-    <ClInclude Include="Listenner.h" />
-    <ClInclude Include="ListNode.h" />
-    <ClInclude Include="Log.h" />
-    <ClInclude Include="Observer.h" />
-    <ClInclude Include="PublicHeader.h" />
-    <ClInclude Include="SharePointer.h" />
-    <ClInclude Include="Smart_ptr.h" />
-    <ClInclude Include="SuZhouTongYuan.h" />
-    <ClInclude Include="TestDaily.h" />
-    <ClInclude Include="ThreadAndProcess.h" />
-    <ClInclude Include="UdpDoubleCommit.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ReadMe.md" />
+    <ClInclude Include="src\BaseHide.h" />
+    <ClInclude Include="src\BasicAlgorithm.h" />
+    <ClInclude Include="src\BinToHex.h" />
+    <ClInclude Include="src\Calculator.h" />
+    <ClInclude Include="src\CanGuanProcess.h" />
+    <ClInclude Include="src\ClassInternetA.h" />
+    <ClInclude Include="src\ClassInternetB.h" />
+    <ClInclude Include="src\CopyConstructor.h" />
+    <ClInclude Include="src\DailyBase.h" />
+    <ClInclude Include="src\DesignMode.h" />
+    <ClInclude Include="src\IPSubnetMask.h" />
+    <ClInclude Include="src\Linear_List.h" />
+    <ClInclude Include="src\Listenner.h" />
+    <ClInclude Include="src\ListNode.h" />
+    <ClInclude Include="src\Log.h" />
+    <ClInclude Include="src\Observer.h" />
+    <ClInclude Include="src\PublicHeader.h" />
+    <ClInclude Include="src\SharePointer.h" />
+    <ClInclude Include="src\Smart_ptr.h" />
+    <ClInclude Include="src\SuZhouTongYuan.h" />
+    <ClInclude Include="src\TestDaily.h" />
+    <ClInclude Include="src\ThreadAndProcess.h" />
+    <ClInclude Include="src\UdpDoubleCommit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
