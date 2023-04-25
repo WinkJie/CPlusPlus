@@ -190,4 +190,3 @@ class JapanFactory :public AbstractFactory {
 };
 #endif
 
-

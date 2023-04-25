@@ -31,6 +31,7 @@
 #include "src/IPSubnetMask.h"
 #include "src/ListNode.h"
 #include "src/SuZhouTongYuan.h"
+#include "src/HuaweiDaily.h"
 
 //#include "../ThreadAndProcess/include/opencv/cv.h"
 //#include "../ThreadAndProcess/include/opencv/cv.hpp"
@@ -101,28 +102,7 @@ using namespace std;
 //	iop->next = nullptr;
 //	return iop;
 //}
-void AbstractFactoryOutput()
-{
-	//抽象工厂模式
-	AbstractFactory* factory = NULL;
-	AbstractApple* apple = NULL;
-	AbstractBanana* Banana = NULL;
-	AbstractPear* Pear = NULL;
 
-	factory = new ChinaFactory;
-	apple = factory->CreateApple();
-	Banana = factory->CreateBanana();
-	Pear = factory->CreatePear();
-
-	apple->showName();
-	Banana->showName();
-	Pear->showName();
-
-	delete Pear;
-	delete apple;
-	delete Banana;
-	delete factory;
-}
 bool Input(vector<string>& arr)
 {
 	string input;
@@ -219,7 +199,15 @@ void AtomicOperater()
 
 int main(int argc, char* argv[])
 {
-#if 1
+#if 0
+	HuaweiDaily a;
+	a.RandomNumber();
+	a.countword();
+	a.PrintLastWord();
+	a.StringSplite();
+#endif // 1
+
+#if 0
 	SuZhouTongYuan* a = new SuZhouTongYuan;
 	SuZhouTongYuan b;
 
@@ -353,12 +341,33 @@ int main(int argc, char* argv[])
 
 #endif // 0
 
-#if 0
-	Factory* fac = new ConcreteFactory();
+#if 1
+	/*Factory* fac = new ConcreteFactory();
 	fac->CreateProduct();
-	Product* p = fac->CreateProduct();
-	AbstractFactoryOutput();
-	CopyConstructor a;
+	Product* p = fac->CreateProduct();*/
+
+	//AbstractFactoryOutput();
+		//抽象工厂模式
+	AbstractFactory* factory = NULL;
+	AbstractApple* apple = NULL;
+	AbstractBanana* Banana = NULL;
+	AbstractPear* Pear = NULL;
+
+	factory = new ChinaFactory;
+	apple = factory->CreateApple();
+	Banana = factory->CreateBanana();
+	Pear = factory->CreatePear();
+
+	apple->showName();
+	Banana->showName();
+	Pear->showName();
+
+	delete Pear;
+	delete apple;
+	delete Banana;
+	delete factory;
+	
+	//CopyConstructor a;
 
 
 	//SimilarRects

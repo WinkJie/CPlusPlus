@@ -158,6 +158,7 @@
     <ClCompile Include="src\CopyConstructor.cpp" />
     <ClCompile Include="src\DailyBase.cpp" />
     <ClCompile Include="src\DesignMode.cpp" />
+    <ClCompile Include="src\HuaweiDaily.cpp" />
     <ClCompile Include="src\IPSubnetMask.cpp" />
     <ClCompile Include="src\Linear_List.cpp" />
     <ClCompile Include="src\Listenner.cpp" />
@@ -181,6 +182,7 @@
     <ClInclude Include="src\CopyConstructor.h" />
     <ClInclude Include="src\DailyBase.h" />
     <ClInclude Include="src\DesignMode.h" />
+    <ClInclude Include="src\HuaweiDaily.h" />
     <ClInclude Include="src\IPSubnetMask.h" />
     <ClInclude Include="src\Linear_List.h" />
     <ClInclude Include="src\Listenner.h" />
