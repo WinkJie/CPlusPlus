@@ -1,10 +1,62 @@
 #include "HuaweiDaily.h"
 
+void HuaweiDaily::print(string& str)
+{
+	// 将 GBK 编码转换为 Unicode 编码
+	const char* gbk = str.c_str();
+	int len = MultiByteToWideChar(CP_ACP, 0, gbk, -1, NULL, 0);
+	wchar_t* unicode = new wchar_t[len];
+	MultiByteToWideChar(CP_ACP, 0, gbk, -1, unicode, len);
+
+	// 设置输出流的编码格式为 Unicode，并输出到控制台
+	_setmode(_fileno(stdout), _O_WTEXT);
+	std::wcout.imbue(std::locale(""));
+	std::wcout << unicode;
+	// 释放内存
+	delete[] unicode;
+}
+void HuaweiDaily::toString(string& str)
+{
+	// 将 UTF-8 格式的字符串转换为 GBK 编码格式
+    const char* utf8 = u8"你好，世界！";
+    int len = MultiByteToWideChar(CP_UTF8, 0, utf8, -1, NULL, 0);
+    wchar_t* gbk = new wchar_t[len];
+    MultiByteToWideChar(CP_UTF8, 0, utf8, -1, gbk, len);
+
+    // 设置输出编码格式为 GBK
+    _setmode(_fileno(stdout), _O_U8TEXT);
+    locale loc("zh-CN");
+    setlocale(LC_ALL, "zh-CN");
+
+    // 输出 GBK 编码格式的字符串
+    wcout.imbue(loc);
+    wcout << gbk << endl;
+    delete[] gbk;
+}
+string HuaweiDaily::StringToGBK(string& str)
+{
+	// 将原始字符串转换为宽字节字符串
+	const int len = MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, NULL, 0);
+	wchar_t* unicode = new wchar_t[len];
+	MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, unicode, len);
+
+	// 将宽字节字符串转换为 GBK 编码
+	const int gbklen = WideCharToMultiByte(CP_ACP, 0, unicode, -1, NULL, 0, NULL, NULL);
+	char* gbk = new char[gbklen];
+	WideCharToMultiByte(CP_ACP, 0, unicode, -1, gbk, gbklen, NULL, NULL);
+
+	// 释放内存并返回结果
+	std::string result(gbk);
+	delete[] unicode;
+	delete[] gbk;
+	return result;
+}
 void HuaweiDaily::PrintLastWord()
 {
 	string str1, str2;
 	int num = 0;
-	cout << "输出最后一个单词的长度，输入字符串会计算最后一个单词的长度：" << endl;
+	string msg = "输出最后一个单词的长度，输入字符串会计算最后一个单词的长度:";
+	cout << StringToGBK(msg)<< endl;
 	getline(cin, str1);
 	//方式一 直接使用字符串功能函数
 	num = str1.find_last_of(" ");
@@ -28,7 +80,6 @@ void HuaweiDaily::PrintLastWord()
 	}
 	cout << numb << endl;
 }
-
 void HuaweiDaily::countword()
 {
 	string s;
@@ -44,9 +95,8 @@ void HuaweiDaily::countword()
 			count++;
 		}
 	}
-	cout << "字符 '" << c << "' 在字符串中出现了 " << count << " 次。" << endl;
+	cout << "字符 '" << c << "在字符串中出现了 " << count << " 次。" << endl;
 }
-
 void HuaweiDaily::RandomNumber()
 {
 	//
@@ -65,7 +115,6 @@ void HuaweiDaily::RandomNumber()
 		break;
 	}
 }
-
 void HuaweiDaily::StringSplite()
 {
 	string str;
@@ -84,4 +133,3 @@ void HuaweiDaily::StringSplite()
 		break;
 	}
 }
-

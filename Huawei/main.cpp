@@ -341,7 +341,7 @@ int main(int argc, char* argv[])
 
 #endif // 0
 
-#if 1
+#if 0
 	/*Factory* fac = new ConcreteFactory();
 	fac->CreateProduct();
 	Product* p = fac->CreateProduct();*/
@@ -352,26 +352,19 @@ int main(int argc, char* argv[])
 	AbstractApple* apple = NULL;
 	AbstractBanana* Banana = NULL;
 	AbstractPear* Pear = NULL;
-
 	factory = new ChinaFactory;
 	apple = factory->CreateApple();
 	Banana = factory->CreateBanana();
 	Pear = factory->CreatePear();
-
 	apple->showName();
 	Banana->showName();
 	Pear->showName();
-
 	delete Pear;
 	delete apple;
 	delete Banana;
-	delete factory;
-	
+	delete factory;	
 	//CopyConstructor a;
-
-
 	//SimilarRects
-
 #endif // 1
 
 #if 0
