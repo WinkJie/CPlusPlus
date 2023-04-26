@@ -8,6 +8,7 @@
 #include <io.h>
 #include <fcntl.h>
 #include <string>
+#include <bitset>
 //#include <Windows.h>
 
 //牛客练习华为机试
@@ -33,9 +34,12 @@ public:
 	void StringSplite();
 	//十进制与二进制的转换
 	string BaseConversion(unsigned int num);
+	//寻找转为二进制后的字符串有多少个1
 	void findNumOfBinary(unsigned int nums);
 	//n进制转换
 	string Baseconversion(unsigned int num, int decimal); //失败
+	//使用bitset寻找二进制中的1数量
+	void findNumSetBitset();
 public:
 	
 

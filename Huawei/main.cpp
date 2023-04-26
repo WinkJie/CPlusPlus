@@ -211,6 +211,7 @@ int main(int argc, char* argv[])
 	
 	std::string binary = a.BaseConversion(decimal);
 	std::cout << "The binary representation of " << decimal << " is " << binary << std::endl;
+	a.findNumSetBitset();
 
 #endif // 1
 

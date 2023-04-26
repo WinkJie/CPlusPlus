@@ -165,3 +165,12 @@ string HuaweiDaily::Baseconversion(unsigned int num, int decimal)
 	else
 		return Baseconversion(num / decimal,decimal) + to_string(num % decimal);
 }
+
+void HuaweiDaily::findNumSetBitset()
+{
+	int n;
+	while (cin >> n) {
+		bitset<32> bs(n);
+		cout << bs.count() << endl;
+	}
+}
