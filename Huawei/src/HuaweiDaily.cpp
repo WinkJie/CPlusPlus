@@ -174,3 +174,45 @@ void HuaweiDaily::findNumSetBitset()
 		cout << bs.count() << endl;
 	}
 }
+
+string HuaweiDaily::findGCSubstr(string& dna, int n)
+{
+	if (n <= 0 || n > dna.size()) 
+	{
+		return "";
+	}
+	double maxRatio = -1.0;    // 最大 GC-Ratio 值
+	std::string maxSubstr;     // 最大 GC-Ratio 子串
+	for (int i = 0; i <= dna.size() - n; i++) 
+	{   // 枚举所有可能的子串
+		std::string substr = dna.substr(i, n);
+		double gcCount = 0;
+		for (char ch : substr) 
+		{   // 统计当前子串中 G 和 C 的个数
+			if (ch == 'G' || ch == 'C') 
+			{
+				gcCount += 1;
+			}
+		}
+		double gcRatio = gcCount / n;   // 计算当前子串的 GC-Ratio 值
+		if (gcRatio > maxRatio) 
+		{   // 如果当前子串的 GC-Ratio 值比之前的最大值大，更新结果
+			maxRatio = gcRatio;
+			maxSubstr = substr;
+		}
+	}
+	return maxSubstr;
+}
+
+void HuaweiDaily::findDna()
+{
+	string dna,maxStr;
+	int n = 0;
+	while (cin>>dna>>n)
+	{
+		maxStr = findGCSubstr(dna, n);
+		cout << "The substring with the highest GC-Ratio and length of " << n <<
+			" is " << maxStr << std::endl;
+	}
+	
+}

@@ -40,6 +40,9 @@ public:
 	string Baseconversion(unsigned int num, int decimal); //失败
 	//使用bitset寻找二进制中的1数量
 	void findNumSetBitset();
+	//寻找DNA中子序列占比最高的子串
+	string findGCSubstr(string &dna, int n);
+	void findDna();
 public:
 	
 
