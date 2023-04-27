@@ -201,7 +201,9 @@ int main(int argc, char* argv[])
 {
 #if 1
 	HuaweiDaily a;
-	a.findDna();
+	//a.findNumOfBinary(10);
+	a.findNumOfBinary32();
+	a.findNumOfBinary64();
 	/*a.RandomNumber();
 	a.countword();
 	a.PrintLastWord();

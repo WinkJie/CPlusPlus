@@ -140,7 +140,7 @@ string HuaweiDaily::BaseConversion(unsigned int num)
 	if (num == 0)
 		return str="0";
 	else
-		return BaseConversion(num / 2) + std::to_string(num % 2);
+		return BaseConversion(num / 2) + to_string(num % 2);
 }
 
 void HuaweiDaily::findNumOfBinary(unsigned int nums)
@@ -154,7 +154,54 @@ void HuaweiDaily::findNumOfBinary(unsigned int nums)
 		if (str[i] == '1')
 			num++;
 	}
+	cout << str.c_str() << endl;
 	cout << num << endl;	
+}
+
+void HuaweiDaily::bitset32()
+{
+	int n;
+	cin >> n;
+	cout << bitset<32>(n) << endl;//使用bitset库将整数转为二进制并输出
+}
+
+void HuaweiDaily::findNumOfBinary32()
+{
+	long long n;
+	int count = 0;
+	cin >> n;
+	string str = (bitset<32>(n).to_string());
+	cout << str.c_str() << endl;
+	cout << bitset<32>(n) << endl;
+	unsigned int m = (unsigned int)n;//将n强制转换为无符号整数
+	while (m != 0) 
+	{
+		//判断m中所有二进制位
+		if (m & 1) //如果当前二进制位为1，count + 1
+			count++;
+		m = m >> 1;//将m右移一位，使下一位成为最低位
+	}
+	cout << count << endl;//输出1的个数
+	//return count;
+}
+
+void HuaweiDaily::findNumOfBinary64()
+{
+	long long n;
+	int count = 0;
+	cin >> n;
+	cout << bitset<64>(n) << endl;
+	string str = (bitset<64>(n).to_string());
+	cout << str.c_str() << endl;
+	while (n != 0) 
+	{
+		//判断n中所有二进制位
+		if (n & 1LL) //如果当前二进制位为1，count + 1
+			count++;
+		n = n >> 1;//将n右移一位，使下一位成为最低位
+	}
+	cout << count << endl;//输出1的个数
+	//return count;
 }
 
 string HuaweiDaily::Baseconversion(unsigned int num, int decimal)
@@ -216,6 +263,11 @@ void HuaweiDaily::findDna()
 	}	
 }
 
+int HuaweiDaily::BottleAlgorithm()
+{
+	return 0;
+}
+
 vector<int> HuaweiDaily::printNumbers(int n)
 {
 	// write code here
@@ -226,4 +278,22 @@ vector<int> HuaweiDaily::printNumbers(int n)
 		vec.push_back(i);
 	}
 	return vec;
+}
+
+int HuaweiDaily::CutRope(int n)
+{
+	if (n < 4)
+		return n - 1;
+	int res = 1;
+	while (n>4)
+	{
+		res *= 3;
+		n -= 3;
+	}
+	return res*n;
+}
+
+void HuaweiDaily::CutRope(long long n, const long long size)
+{	
+
 }
