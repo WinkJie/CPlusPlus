@@ -213,6 +213,5 @@ void HuaweiDaily::findDna()
 		maxStr = findGCSubstr(dna, n);
 		cout << "The substring with the highest GC-Ratio and length of " << n <<
 			" is " << maxStr << std::endl;
-	}
-	
+	}	
 }
