@@ -39,6 +39,10 @@ public:
 
 	//十进制与二进制的转换
 	string BaseConversion(unsigned int num);
+	/*输出二进制位为32位
+	 * 自己实现同bitset<n>(num);
+	 */
+	string BaseConversions(unsigned int num, int digits = 0);
 	//将一个数字转为二进制32位的
 	void bitset32();
 

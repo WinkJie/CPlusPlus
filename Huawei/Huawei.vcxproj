@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="delipse.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\BaseHide.cpp" />
     <ClCompile Include="src\BasicAlgorithm.cpp" />
@@ -172,6 +173,7 @@
     <ClCompile Include="src\UdpDoubleCommit.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="delipse.h" />
     <ClInclude Include="src\BaseHide.h" />
     <ClInclude Include="src\BasicAlgorithm.h" />
     <ClInclude Include="src\BinToHex.h" />

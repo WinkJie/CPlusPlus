@@ -140,7 +140,32 @@ string HuaweiDaily::BaseConversion(unsigned int num)
 	if (num == 0)
 		return str="0";
 	else
-		return BaseConversion(num / 2) + to_string(num % 2);
+		return (BaseConversion(num / 2) + to_string(num % 2));
+}
+
+string HuaweiDaily::BaseConversions(unsigned int num, int digits)
+{
+	string str;
+	if (num == 0) 
+	{
+		str = "0";
+	}
+	else 
+	{
+		// 计算新的digit
+		int newDigits = digits + 1;
+		if (newDigits < 32) {
+			str = BaseConversions(num / 2, newDigits) + to_string(num % 2);
+		}
+		else {
+			str = "1" + string(31, '0'); // 返回一个全零的32位二进制数
+		}
+	}
+	// 在结果前补零，确保返回的字符串长度为32
+	while (str.size() < 32) {
+		str = "0" + str;
+	}
+	return str;
 }
 
 void HuaweiDaily::findNumOfBinary(unsigned int nums)
