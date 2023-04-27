@@ -215,3 +215,15 @@ void HuaweiDaily::findDna()
 			" is " << maxStr << std::endl;
 	}	
 }
+
+vector<int> HuaweiDaily::printNumbers(int n)
+{
+	// write code here
+	//pow(n,i);函数是返回n的i次方的值，其中n是底数，i是指数。
+	vector<int> vec;
+	for (int i = 1; i < pow(10, n); i++)
+	{
+		vec.push_back(i);
+	}
+	return vec;
+}

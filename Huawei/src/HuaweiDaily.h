@@ -9,6 +9,7 @@
 #include <fcntl.h>
 #include <string>
 #include <bitset>
+#include <vector>
 //#include <Windows.h>
 
 //牛客练习华为机试
@@ -43,6 +44,11 @@ public:
 	//寻找DNA中子序列占比最高的子串
 	string findGCSubstr(string &dna, int n);
 	void findDna();
+	//收拾旧瓶子算法
+	//int 
+	vector<int> printNumbers(int n);
+	
+
 public:
 	
 
