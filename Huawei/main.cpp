@@ -32,6 +32,7 @@
 #include "src/ListNode.h"
 #include "src/SuZhouTongYuan.h"
 #include "src/HuaweiDaily.h"
+#include "src/delipse.h"
 
 //#include "../ThreadAndProcess/include/opencv/cv.h"
 //#include "../ThreadAndProcess/include/opencv/cv.hpp"
@@ -200,6 +201,11 @@ void AtomicOperater()
 int main(int argc, char* argv[])
 {
 #if 1
+	delipse* a = new delipse;
+	a->cpucomputerthread();
+#endif // 1
+
+#if 0
 	HuaweiDaily a;
 	//a.findNumOfBinary(10);
 	a.findNumOfBinary32();

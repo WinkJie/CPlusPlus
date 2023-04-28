@@ -147,7 +147,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="delipse.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\BaseHide.cpp" />
     <ClCompile Include="src\BasicAlgorithm.cpp" />
@@ -158,6 +157,7 @@
     <ClCompile Include="src\ClassInternetB.cpp" />
     <ClCompile Include="src\CopyConstructor.cpp" />
     <ClCompile Include="src\DailyBase.cpp" />
+    <ClCompile Include="src\delipse.cpp" />
     <ClCompile Include="src\DesignMode.cpp" />
     <ClCompile Include="src\HuaweiDaily.cpp" />
     <ClCompile Include="src\IPSubnetMask.cpp" />
@@ -173,7 +173,6 @@
     <ClCompile Include="src\UdpDoubleCommit.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="delipse.h" />
     <ClInclude Include="src\BaseHide.h" />
     <ClInclude Include="src\BasicAlgorithm.h" />
     <ClInclude Include="src\BinToHex.h" />
@@ -183,6 +182,7 @@
     <ClInclude Include="src\ClassInternetB.h" />
     <ClInclude Include="src\CopyConstructor.h" />
     <ClInclude Include="src\DailyBase.h" />
+    <ClInclude Include="src\delipse.h" />
     <ClInclude Include="src\DesignMode.h" />
     <ClInclude Include="src\HuaweiDaily.h" />
     <ClInclude Include="src\IPSubnetMask.h" />

@@ -82,6 +82,7 @@ public:
 
 	/*EXCEPT Test*/
 	void fun()noexcept;
+    /**/
 
 private:
 	int number;
