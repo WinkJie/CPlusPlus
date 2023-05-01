@@ -290,6 +290,7 @@ void HuaweiDaily::findDna()
 
 int HuaweiDaily::BottleAlgorithm()
 {
+	//¼ÆËãÆ¿×Ó
 	int n;
 	while (cin >> n)
 	{

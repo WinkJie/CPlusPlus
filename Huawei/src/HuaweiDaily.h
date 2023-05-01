@@ -8,7 +8,7 @@
 #include <iostream>
 #include <Windows.h>
 
-//#include <iostream>
+ //#include <iostream>
 #include <io.h>
 #include <fcntl.h>
 #include <string>
@@ -75,13 +75,13 @@ public:
 	子串有: ACG , CG , CGT 等等，但是没有 AGT ， CT 等等数据范
 	围：字符串长度满足1≤n≤1000  ，输入的字符串只包含 A/C/G/T 字母
 	*/
-	string findGCSubstr(string &dna, int n);
+	string findGCSubstr(string& dna, int n);
 	void findDna();
 
 	//收拾旧瓶子算法
 	/*某商店规定：三个空汽水瓶可以换一瓶汽水，允许向老板借空汽水
 	瓶（但是必须要归还）。小张手上有n个空汽水瓶，她想知道自己最多
-	可以喝到多少瓶汽水。数据范围：输入的正整数满足 1≤n≤100 
+	可以喝到多少瓶汽水。数据范围：输入的正整数满足 1≤n≤100
 	*/
 	int BottleAlgorithm();
 
@@ -106,7 +106,7 @@ public:
 
 
 public:
-	
+
 
 };
 
