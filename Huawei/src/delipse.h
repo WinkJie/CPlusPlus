@@ -193,8 +193,6 @@ public:
 				});
 		}
 	}
-
-
 private:
 	const int knumthreads = 4;
 private:
