@@ -102,11 +102,11 @@ public:
 	由于答案过大，请对 998244353 取模。.
 	动态规划
 	*/
-	void CutRope(long long n, const long long size = 998244353);//失败
-
+	int CutRope(long long n, int m,const long long size = 998244353);//失败
+	long long CutRope1(long long n, const long long size = 998244353);
 
 public:
-
+	const int MOD = 998244353;
 
 };
 

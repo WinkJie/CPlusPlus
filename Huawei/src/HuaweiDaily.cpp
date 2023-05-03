@@ -333,7 +333,47 @@ int HuaweiDaily::CutRope(int n)
 	return res * n;
 }
 
-void HuaweiDaily::CutRope(long long n, const long long size)
+int HuaweiDaily::CutRope(long long n, int m,const long long size)
 {
+	int ans = 1;
+	for (int i = 0; i < n; ++i)
+	{
+		int k = n - i;
+		int x = std::floor(1.0 * k / (m - i));
+		ans = 1LL * ans * x % MOD;
+		n -= x;
+	}
+	return ans;
+}
 
+long long HuaweiDaily::CutRope1(long long n, const long long size)
+{
+	if (n < 2)
+		return 0; // 长度小于2时不能分割，直接返回0
+	if (n == 2) 
+		return 1; // 长度为2时只能分成长度为1和1的两段，返回1
+	if (n == 3) 
+		return 2; // 长度为3时最多可以分成长度为2和1的两段或者长度为1、1、1的三段，返回2
+
+	int seg = n / size;   // 分成的段数
+	int rem = n % size;   // 剩余的长度
+	long long prod = 1;   // 总的乘积
+
+	for (int i = 0; i < seg; ++i) 
+	{
+		prod *= size;     // 计算每一段的乘积
+	}
+
+	if (rem > 0) 
+	{       // 如果有剩余的长度，则需要再分一段
+		prod *= rem;
+		--seg;
+	}
+
+	while (seg--) 
+	{      // 把多余的段继续分割
+		prod *= (size + 1);
+	}
+
+	return prod;
 }
