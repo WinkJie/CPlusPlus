@@ -15,7 +15,7 @@ void HuaweiDaily::print(string& str)
 	// 释放内存
 	delete[] unicode;
 }
-void HuaweiDaily::toString(string& str)
+void HuaweiDaily::toStringGBK(string& str)
 {
 	// 将 UTF-8 格式的字符串转换为 GBK 编码格式
 	const char* utf8 = u8"你好，世界！";

@@ -26,7 +26,7 @@ class HuaweiDaily
 public:
 	//字符串转换
 	void print(string& str);
-	void toString(string& str);
+	void toStringGBK(string& str);
 	string StringToGBK(string& str);
 
 	//字符串最后一个单词的长度
