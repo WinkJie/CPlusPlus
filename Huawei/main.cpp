@@ -200,7 +200,7 @@ void AtomicOperater()
 
 int main(int argc, char* argv[])
 {
-#if 1
+#if 0
 	delipse* a = new delipse;
 	a->cpucomputerthread();
 #endif // 1
@@ -224,9 +224,13 @@ int main(int argc, char* argv[])
 
 #endif // 1
 
-#if 0
+#if 1
+	cout << 1 << endl;
 	SuZhouTongYuan* a = new SuZhouTongYuan;
+	cout << 2 << endl << endl << endl;
 	SuZhouTongYuan b;
+	b.Do();
+	cout << 3 << endl;
 
 #endif
 #if 0

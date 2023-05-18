@@ -43,6 +43,7 @@ CopyConstructor& CopyConstructor::operator=(const CopyConstructor& obj)
 		pointer = new int;
 		*pointer = *obj.pointer;
 	}
+	return *this;
 }
 
 void CopyConstructor::printop()
