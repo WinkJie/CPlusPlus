@@ -173,20 +173,20 @@ atomic<int> g_count;
 //2.no atomic
 //int g_count = 0;
 
-void work(int x)
+void work(string &str)
 {
 	for (int i = 0; i < 1000; i++)
 	{
 		g_count++;
-		cout << x << " is " << g_count << "   ";
+		cout << str << " is " << g_count << "   ";
 	}
 	cout << endl;
 }
 
 void AtomicOperater()
 {
-	std::thread t1(work, 1);
-	std::thread t2(work, 2);
+	std::thread t1(work, "线程1");
+	std::thread t2(work, "线程2");
 	t1.join();
 	t2.join();
 
@@ -224,7 +224,7 @@ int main(int argc, char* argv[])
 
 #endif // 1
 
-#if 1
+#if 0
 	cout << 1 << endl;
 	SuZhouTongYuan* a = new SuZhouTongYuan;
 	cout << 2 << endl << endl << endl;
